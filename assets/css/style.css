@@ -147,7 +147,7 @@ body {
   clip-path: polygon(100% 20%, 100% 40%, 100% 20%, 90% 90%, 1% 90%, 15% 10%);
   padding: 8% 5% 25% 15%;
   transform: translateX(-15%) translateY(-45px);
-  height: 600px !important;
+  height: 645px !important;
   color: aliceblue;
 }
 .qmta-roleplay-section .btn-warning {
@@ -209,9 +209,7 @@ body {
     right: 20%;
   }
   .tree-container {
-    right: -42%;
-    transform: translateY(-110%);
-    z-index: 1050 !important;
+    display: none !important;
   }
   .main-aside li {
     transform: rotate(0deg) !important;
@@ -224,6 +222,9 @@ body {
     z-index: 2 !important;
   }
   .section-character-content-one {
+    display: none !important;
+  }
+  .section-character-content-two {
     display: none !important;
   }
   .gta-image-container {
