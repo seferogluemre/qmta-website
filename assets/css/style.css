@@ -120,9 +120,6 @@ body {
   transform: translateX(-18px);
 }
 
-.main-aside .text-start {
-  transform: translateX(8%);
-}
 .main-aside .social-item {
   background: linear-gradient(to left, #6256ca 10%, #000fff 100%);
   clip-path: polygon(100% 20%, 100% 40%, 100% 20%, 90% 90%, 1% 90%, 15% 10%);
@@ -149,8 +146,14 @@ body {
   background: linear-gradient(to left, #6256ca 10%, #000fff 100%);
   clip-path: polygon(100% 20%, 100% 40%, 100% 20%, 90% 90%, 1% 90%, 15% 10%);
   padding: 8% 5% 25% 15%;
-  transform: translateX(-7%) translateY(-45px);
+  transform: translateX(-15%) translateY(-45px);
   height: 600px !important;
+  color: aliceblue;
+}
+.qmta-roleplay-section .btn-warning {
+  border: none;
+  box-shadow: 0 35px 28px #283d61;
+  cursor: pointer;
 }
 
 .tree-container {
@@ -160,6 +163,45 @@ body {
   transform: translateY(-80%); /* Yüksekliğin yarısını yukarı kaydır */
 }
 
+.section-character-container {
+  position: relative;
+}
+
+.section-character-content-one {
+  position: absolute;
+  transform: translateX(76%) translateY(-3%) scale(1.4);
+  z-index: 1;
+}
+
+.section-character-content-two {
+  position: absolute;
+  left: 50%;
+  transform: translateX(92%) translateY(-20%);
+  width: 90%;
+  z-index: 1 !important;
+}
+
+.gta-image-container {
+  position: relative;
+  left: -22%;
+  margin-left: 10%; /* Sol taraftan %10 boşluk */
+  margin-top: 20px; /* Üstten boşluk */
+  width: fit-content; /* İçeriğe göre genişlik0*/
+  transform: translateY(-120%);
+  animation: bounce 3s infinite alternate; /* Animasyon ekle */
+  z-index: 1050 !important;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(-155%);
+  }
+
+  100% {
+    transform: translateY(5px) !important;
+  }
+}
+
 /* Media SCREEN CSS Start */
 @media (max-width: 578px) {
   .nav-button-group {
@@ -167,7 +209,9 @@ body {
     right: 20%;
   }
   .tree-container {
-    display: none;
+    right: -42%;
+    transform: translateY(-110%);
+    z-index: 1050 !important;
   }
   .main-aside li {
     transform: rotate(0deg) !important;
@@ -179,6 +223,18 @@ body {
     clip-path: none;
     z-index: 2 !important;
   }
+  .section-character-content-one {
+    display: none !important;
+  }
+  .gta-image-container {
+    position: relative;
+    left: -10%; /* Eşleşecek şekilde ayarla */
+    margin-left: 10%;
+    width: fit-content;
+    transform: translateY(-20%); /* Yukarıda başlasın */
+    animation: bounce 3s infinite alternate; /* Animasyonu ekle */
+    z-index: 1050 !important;
+  }
 }
 
 @media (min-width: 578px) and (max-width: 992px) {
@@ -187,6 +243,13 @@ body {
     right: -63%;
     top: 50%; /* Dikey ortalama için %50 */
     transform: translateY(-84%); /* Yüksekliğin yarısını yukarı kaydır */
+  }
+
+  .qmta-roleplay-section {
+    position: relative;
+    margin: 15px auto;
+    clip-path: polygon(100% 10%, 100% 50%, 100% 20%, 90% 90%, 1% 90%, 15% 10%);
+    z-index: 2 !important;
   }
 }
 
