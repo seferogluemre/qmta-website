@@ -103,9 +103,16 @@
       </nav>
     </header>
     <!-- Top Navbar end -->
+    <!-- NAVİGATİON START -->
+    <main class="scrool-navigation">
+      <span class="indicator" data-target="#hero-section">●</span>
+      <span class="indicator" data-target="#section-two">●</span>
+      <span class="indicator" data-target="">●</span>
+    </main>
+    <!-- NAVİGATİON END -->
 
     <!-- Main Section START -->
-    <aside class="main-aside my-5">
+    <aside id="hero-section" class="main-aside mt-5">
       <div class="container pb-4">
         <div class="text-start">
           <ul class="d-flex flex-row column-gap-2 list-unstyled">
@@ -131,14 +138,14 @@
             <div class="section-character-content-one">
               <img
                 src="./assets/images/khloe_cut_lfomqw_c_scale_w_810.png"
-                class="img-fluid"
+                class="img-fluid photo-character"
                 alt="Man"
               />
             </div>
             <div class="section-character-content-two">
               <img
                 src="./assets/images/man_r_clbc4t_c_scale_w_668.png"
-                class="img-fluid"
+                class="img-fluid photo-character"
                 alt="Khloe"
               />
             </div>
@@ -159,7 +166,7 @@
                 have a question make sure to check out our social media. While
                 you will find us hosting other games like DayZ and Project
               </p>
-              <button class="btn btn-warning p-3 text-light fs-5">
+              <button class="btn p-3 text-light fs-5">
                 Apply Now On Discord
               </button>
             </div>
@@ -199,8 +206,30 @@
     </aside>
     <!-- Nain Section End -->
 
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <section class="main-section" id="section-two">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Col1 -->
+          <div class="col-lg-4">
+            <div class="helicopter-image-container">
+              <div class="helicopter-image-content">
+                <img
+                  src="./assets/images/helicopter-imace-effect.png"
+                  alt="Helikopter"
+                  class="img-fluid"
+                />
+              </div>
+            </div>
+          </div>
+           <!-- Col 2 -->
+          <div class="col-lg-4"></div>
+           <!-- Col 3 -->
+          <div class="col-lg-4"></div>
+        </div>
+      </div>
+    </section>
 
+    <script src="assets/js/script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
