@@ -198,16 +198,6 @@ body {
   }
 }
 
-/* Media SCREEN CSS Start */
-@media (max-width: 513px) {
-  #right-column {
-    position: relative;
-    transform: scaleX(-1) translateY(-105%) !important;
-    right: -50% !important;
-    width: 200px;
-  }
-}
-
 @media (max-width: 578px) {
   .tree-container {
     display: none !important;
@@ -255,10 +245,7 @@ body {
     display: none !important;
   }
   #right-column {
-    position: relative;
-    right: -35%;
-    transform: scaleX(-1) translateY(-95%);
-    width: 400px;
+    display: none !important;
   }
   #column-center {
     z-index: 3050 !important;
