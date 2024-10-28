@@ -87,12 +87,12 @@ body {
 
 .gta-image-container {
   position: relative;
-  left: -22%;
-  margin-left: 10%; /* Sol taraftan %10 boşluk */
-  margin-top: 20px; /* Üstten boşluk */
-  width: fit-content; /* İçeriğe göre genişlik0*/
+  left: -30%;
+  margin-left: 10%;
+  margin-top: 20px;
+  width: fit-content;
   transform: translateY(-120%);
-  animation: bounce 3s infinite alternate; /* Animasyon ekle */
+  animation: bounce 1s infinite alternate;
   z-index: 1050 !important;
 }
 
@@ -149,7 +149,7 @@ body {
 }
 
 #section-two {
-  transform: translateY(-20%);
+  transform: translateY(-40%);
 }
 .main-right-image {
   position: absolute;
@@ -160,23 +160,37 @@ body {
 #right-column {
   position: relative;
 }
-#right-column:hover #left-column {
-  position: relative;
-}
+
 .right-character-image {
-  filter: grayscale(80%) contrast(60%);
+  filter: grayscale(100%);
 }
 .left-character-image {
   position: absolute;
   left: 5%;
-  filter: grayscale(80%) contrast(60%);
+  filter: grayscale(100%);
   width: 100%;
   transform: translateY(-115%) !important;
+}
+.deneme-title {
+  position: relative;
+  font-size: 25px;
+}
+.deneme-title:after {
+  content: "";
+  position: absolute;
+  bottom: -3px !important;
+  width: 240px;
+  height: 2px;
+  border: 1px solid rgb(156, 0, 101);
+  background-color: rgb(156, 0, 101);
+  transform-origin: right;
+  transform: translateX(-102%);
+  border-bottom-right-radius: 15px !important;
 }
 
 @keyframes bounce {
   0% {
-    transform: translateY(-155%);
+    transform: translateY(-135%);
   }
 
   100% {
@@ -185,6 +199,15 @@ body {
 }
 
 /* Media SCREEN CSS Start */
+@media (max-width: 513px) {
+  #right-column {
+    position: relative;
+    transform: scaleX(-1) translateY(-105%) !important;
+    right: -50% !important;
+    width: 200px;
+  }
+}
+
 @media (max-width: 578px) {
   .tree-container {
     display: none !important;
@@ -195,8 +218,12 @@ body {
   }
   .qmta-roleplay-section {
     position: relative;
-    margin: 15px auto;
+    margin-left: 73px !important;
+    margin-top: 10px;
     clip-path: none;
+    width: 390px;
+    height: 540px !important;
+    padding: 5px;
     z-index: 2 !important;
   }
   .section-character-content-one {
@@ -215,28 +242,75 @@ body {
     z-index: 1050 !important;
   }
   #section-two {
-    transform: translateY(-15%);
+    transform: translateY(3%);
   }
 
-  #right-column {
+  /* #right-column {
     display: none !important;
   }
   #left-column {
     display: none !important;
+  } */
+  #right-column .main-right-image {
+    display: none !important;
+  }
+  #right-column {
+    position: relative;
+    right: -35%;
+    transform: scaleX(-1) translateY(-95%);
+    width: 400px;
   }
   #column-center {
+    z-index: 3050 !important;
     flex: 100%;
+  }
+  /* Left Column */
+  #left-column .main-left-image {
+    display: none !important;
+  }
+  #left-column {
+    position: relative;
+    left: -58%;
+    top: 550px;
+    transform: scaleX(-1);
+  }
+  #left-column .left-character-image {
+    filter: none !important;
+    width: 380px;
+  }
+  .right-character-image {
+    filter: none !important;
+    transform: translateX(-10%);
+  }
+  .scrool-navigation {
+    display: none !important;
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: translateY(-90%);
+    }
+
+    100% {
+      transform: translateY(5px) !important;
+    }
   }
 }
 
 @media (min-width: 578px) and (max-width: 992px) {
-  .tree-container {
-    position: relative; /* Mutlak konumlandırma */
-    right: -63%;
-    top: 50%; /* Dikey ortalama için %50 */
-    transform: translateY(-84%); /* Yüksekliğin yarısını yukarı kaydır */
+  #section-two {
+    transform: translateY(-25%);
   }
-
+  .tree-container {
+    position: relative;
+    right: -63%;
+    top: 50%;
+    transform: translateY(-84%);
+  }
+  .section-character-content-one .photo-character {
+    transform: translateX(-10%) translateY(-10%);
+    z-index: 3050 !important;
+  }
   .qmta-roleplay-section {
     position: relative;
     margin: 15px auto;
@@ -244,10 +318,65 @@ body {
     z-index: 2 !important;
     padding: 90px;
   }
-  .main-section #right-column {
+
+  #right-column .main-right-image {
+    display: none !important;
+  }
+  .right-character-image {
+    display: none !important;
+  }
+  .left-character-image {
+    display: none !important;
+  }
+
+  /* #right-column {
+    position: relative;
+    right: -15%;
+    top: -80%;
+    transform: scaleX(-1);
+    width: 400px;
+  }
+  #column-center {
+    z-index: 3050 !important;
+    transform: translateX(70%);
+  } */
+  /* Left Column */
+  #left-column .main-left-image {
+    display: none !important;
+  }
+  /* #left-column {
+    position: relative;
+    left: -58%;
+    top: 550px;
+    transform: scaleX(-1);
+  }
+  #left-column .left-character-image {
+    width: 380px;
+  } */
+
+  /* .main-section #right-column {
     display: none !important;
   }
   .main-section #left-column {
     display: none !important;
+  } */
+}
+
+@media (min-width: 900px) and (max-width: 1300px) {
+  #right-column .main-right-image {
+    display: none !important;
+  }
+  #right-column .right-character-image {
+    transform: scaleX(-1);
+  }
+  /* Left Column */
+  #left-column .main-left-image {
+    display: none !important;
+  }
+  .left-character-image {
+    transform: scaleX(-1) translateX(70%) !important;
+  }
+  .left-character-image .img-fluid {
+    height: 500px !important;
   }
 }

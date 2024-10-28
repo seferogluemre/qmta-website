@@ -35,14 +35,14 @@ const btn1 = document.querySelector(".hover-btn-two");
 
 rightColumn.addEventListener("mouseover", () => {
   rightCharacterImage.style.filter = "none";
-  rightCharacterImage.style.transition = "0.9s ease-in-out";
-  btn1.style.background = "#55983d";
-  btn1.style.transition = "0.9s ease-in-out";
+  rightCharacterImage.style.transition = "0.3s ease-in";
+  btn1.style.background = "#B03052";
+  btn1.style.transition = "0.3s ease-in";
 });
 
 rightColumn.addEventListener("mouseout", () => {
   btn1.style.background = "transparent";
-  rightCharacterImage.style.filter = "grayscale(80%) contrast(60%)";
+  rightCharacterImage.style.filter = "grayscale(100%)";
 });
 
 const leftColumn = document.getElementById("left-column");
@@ -51,12 +51,12 @@ const btn2 = document.querySelector(".hover-btn-one");
 
 leftColumn.addEventListener("mouseover", () => {
   leftCharacterImage.style.filter = "none";
-  leftCharacterImage.style.transition = "0.9s ease-in-out";
-  btn2.style.background = "#55983d";
-  btn2.style.transition = "0.9s ease-in-out";
+  leftCharacterImage.style.transition = "0.3s ease-in";
+  btn2.style.background = "#B03052";
+  btn2.style.transition = "0.3s ease-in";
 });
 
 leftColumn.addEventListener("mouseout", () => {
   btn2.style.background = "transparent";
-  leftCharacterImage.style.filter = "grayscale(80%) contrast(60%)";
+  leftCharacterImage.style.filter = "grayscale(100%)";
 });
