@@ -1,12 +1,12 @@
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
-  font-size: 18px;
-  font-weight: 600;
+  font-size: 19px;
+  font-weight: 700;
   height: 300vh;
   margin: 0;
   scroll-behavior: smooth !important;
-  background-repeat: repeat-y;
+  background-repeat: repeat-y !important;
   padding: 0px !important;
   overflow-x: hidden !important;
   background-image: url("../images/bg.png");
@@ -187,6 +187,37 @@ body {
   transform: translateX(-102%);
   border-bottom-right-radius: 15px !important;
 }
+.downloads-section {
+  transform: translateY(-68%);
+}
+.downloads-section .container-fluid {
+  padding: 5%;
+}
+
+.gtasa-download-card {
+  width: 100%;
+  height: 100px;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  border: 1px solid #6a6a6a;
+  padding: 14px;
+  text-wrap: stable;
+  color: aliceblue !important;
+}
+.gtasa-download-card .btn {
+  box-shadow: 0 5px 12px #b03052;
+}
+.gtasa-download-card .gtasa-logo {
+  width: 50px;
+  height: 50px;
+  transform: scale(1.5) translate(15%);
+}
+.gtasa-download-card .mtasa-logo {
+  width: 60px;
+  height: 50px;
+  margin-right: 15px !important;
+  transform: scale(1.5) translate(15%);
+}
 
 @keyframes bounce {
   0% {
@@ -201,6 +232,9 @@ body {
 @media (max-width: 578px) {
   .tree-container {
     display: none !important;
+  }
+  .hover-btn-two {
+    height: 80%;
   }
   .main-aside li {
     transform: rotate(0deg) !important;
@@ -224,15 +258,18 @@ body {
   }
   .gta-image-container {
     position: relative;
-    left: -10%; /* Eşleşecek şekilde ayarla */
+    left: -10%;
     margin-left: 10%;
     width: fit-content;
-    transform: translateY(-20%); /* Yukarıda başlasın */
-    animation: bounce 3s infinite alternate; /* Animasyonu ekle */
+    transform: translateY(-20%);
+    animation: bounce 3s infinite alternate;
     z-index: 1050 !important;
   }
   #section-two {
     transform: translateY(3%);
+  }
+  .gtasa-download-card {
+    height: auto !important;
   }
 
   /* #right-column {
@@ -271,6 +308,9 @@ body {
   }
   .scrool-navigation {
     display: none !important;
+  }
+  .downloads-section {
+    transform: translateY(20%);
   }
 
   @keyframes bounce {
@@ -316,6 +356,9 @@ body {
     display: none !important;
   }
 
+  .downloads-section {
+    transform: translateY(10%);
+  }
   /* #right-column {
     position: relative;
     right: -15%;
@@ -365,5 +408,8 @@ body {
   }
   .left-character-image .img-fluid {
     height: 500px !important;
+  }
+  .gtasa-download-card {
+    height: auto !important;
   }
 }
