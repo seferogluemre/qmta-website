@@ -56,13 +56,12 @@ body {
 }
 
 .tree-container {
-  position: relative; /* Mutlak konumlandırma */
+  position: relative;
   right: -80%;
-  top: 50%; /* Dikey ortalama için %50 */
+  width: 100%;
+  top: 100% !important;
   height: 300px;
-  transform: translateY(
-    -370%
-  ) !important; /* Yüksekliğin yarısını yukarı kaydır */
+  transform: translateY(-370%) !important;
 }
 
 .section-character-container {
@@ -74,13 +73,14 @@ body {
   transform: translateX(76%) translateY(-5%) scale(1.4);
   transition: 2.5s ease-in-out !important;
   z-index: 1;
+  display: block;
 }
 
 .section-character-content-two {
   position: absolute;
   left: 50%;
   transform: translateX(92%) translateY(-19%);
-  width: 100%;
+  width: 85%;
   transition: 2.5s ease-in-out !important;
   z-index: 1 !important;
 }
@@ -96,25 +96,6 @@ body {
   z-index: 1050 !important;
 }
 
-.scrool-navigation {
-  position: fixed;
-  right: 20px;
-  top: 50%;
-  display: flex;
-  flex-direction: column;
-  z-index: 1050;
-  color: #c3c3c3;
-}
-
-.indicator {
-  cursor: pointer;
-  font-size: 35px;
-  transition: color 0.3s;
-}
-
-.indicator:hover {
-  color: #a6ff77;
-}
 .collapse:not(.show) {
   display: inline !important;
 }
@@ -133,6 +114,7 @@ body {
   box-shadow: 0 0 20px #8b8b8b;
   transform: scale(1.02);
 }
+
 .main-section .container-fluid {
   background-image: url(../images/particles.png);
 }
@@ -168,7 +150,7 @@ body {
   position: absolute;
   left: 5%;
   filter: grayscale(100%);
-  width: 100%;
+  width: 50%;
   transform: translateY(-115%) !important;
 }
 .deneme-title {
@@ -188,7 +170,7 @@ body {
   border-bottom-right-radius: 15px !important;
 }
 .downloads-section {
-  transform: translateY(-68%);
+  transform: translateY(-48%);
 }
 .downloads-section .container-fluid {
   padding: 5%;
@@ -286,6 +268,7 @@ body {
   }
   .hover-btn-two {
     height: 80%;
+    z-index: 3050 !important;
   }
   .main-aside li {
     transform: rotate(0deg) !important;
@@ -323,17 +306,21 @@ body {
     height: auto !important;
   }
 
-  /* #right-column {
-    display: none !important;
-  }
-  #left-column {
-    display: none !important;
-  } */
   #right-column .main-right-image {
     display: none !important;
   }
+  #right-column .right-character-image {
+    width: 120px !important;
+    filter: none !important;
+    height: 100%;
+    transform: translateX(-305%);
+  }
   #right-column {
-    display: none !important;
+    position: fixed;
+    right: 0%;
+    overflow: hidden !important;
+    width: 60%;
+    transform: scaleX(-1) translateY(-30%) !important;
   }
   #column-center {
     z-index: 3050 !important;
@@ -344,22 +331,16 @@ body {
     display: none !important;
   }
   #left-column {
-    position: relative;
-    left: -58%;
-    top: 550px;
+    position: fixed;
+    left: -50%;
+    top: 600px;
     transform: scaleX(-1);
   }
   #left-column .left-character-image {
     filter: none !important;
     width: 380px;
   }
-  .right-character-image {
-    filter: none !important;
-    transform: translateX(-10%);
-  }
-  .scrool-navigation {
-    display: none !important;
-  }
+
   .downloads-section {
     transform: translateY(20%);
   }
@@ -395,15 +376,22 @@ body {
   #section-two {
     transform: translateY(-25%);
   }
-  .tree-container {
-    position: relative;
-    right: -63%;
-    top: 50%;
-    transform: translateY(-84%);
-  }
-  .section-character-content-one .photo-character {
-    transform: translateX(-10%) translateY(-10%);
+  .hover-btn-two {
+    height: 80%;
     z-index: 3050 !important;
+  }
+  .hover-btn-one {
+    height: 80%;
+    z-index: 3050 !important;
+  }
+  .tree-container {
+    display: none;
+  }
+  .section-character-content-one {
+    display: none;
+  }
+  .section-character-content-two {
+    display: none;
   }
   .qmta-roleplay-section {
     position: relative;
@@ -416,70 +404,102 @@ body {
   #right-column .main-right-image {
     display: none !important;
   }
-  .right-character-image {
-    display: none !important;
+  #right-column {
+    display: none;
+    /* position: absolute;
+    right: -25%;
+    width: 60% !important;
+    overflow-x: hidden !important;
+    z-index: -1 !important;
+    transform: scaleX(-1) translateY(13%); */
   }
-  .left-character-image {
-    display: none !important;
+
+  #left-column .left-character-image {
+    filter: none !important;
+    width: 100%;
+  }
+  #left-column {
+    position: fixed !important;
+    left: -57%;
+    top: 160%;
+    z-index: -1 !important;
+    transform: scaleX(-1);
   }
 
   .downloads-section {
     transform: translateY(10%);
   }
-  /* #right-column {
-    position: relative;
-    right: -15%;
-    top: -80%;
-    transform: scaleX(-1);
-    width: 400px;
-  }
-  #column-center {
-    z-index: 3050 !important;
-    transform: translateX(70%);
-  } */
-  /* Left Column */
+
   #left-column .main-left-image {
     display: none !important;
   }
-  /* #left-column {
-    position: relative;
-    left: -58%;
-    top: 550px;
-    transform: scaleX(-1);
-  }
-  #left-column .left-character-image {
-    width: 380px;
-  } */
-
-  /* .main-section #right-column {
-    display: none !important;
-  }
-  .main-section #left-column {
-    display: none !important;
-  } */
 }
 
-@media (min-width: 900px) and (max-width: 1300px) {
+@media (min-width: 778px) and (max-width: 990px) {
+  #right-column {
+    position: absolute; /* fixed yerine absolute kullanıyoruz */
+    right: -25%; /* 1% yerine 0 */
+    width: 60% !important; /* 100% yerine 50% */
+    transform: scaleX(-1) translateY(-1%) !important; /* translateX kaldırıldı */
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1300px) {
   #right-column .main-right-image {
     display: none !important;
   }
   #right-column .right-character-image {
-    transform: scaleX(-1);
+    transform: scaleX(-1) scale(1.5);
+  }
+  #right-column {
+    position: relative;
+    right: 6%;
+    transform: translateY(10%);
+  }
+  .right-character-image img {
+    width: 80%;
+    height: 100% !important;
   }
   /* Left Column */
   #left-column .main-left-image {
     display: none !important;
   }
+  .tree-container {
+    display: none !important;
+  }
   .left-character-image {
-    transform: scaleX(-1) translateX(70%) !important;
+    transform: scaleX(-1) translateX(50%) !important;
   }
   .left-character-image .img-fluid {
     height: 500px !important;
   }
   .downloads-section {
-    transform: translateY(-30%);
+    transform: translateY(10%);
   }
   .gtasa-download-card {
     height: auto !important;
+  }
+  .main-section {
+    transform: translateY(5%) !important;
+  }
+  .section-character-content-one {
+    transform: translateX(200%) scale(1.6);
+    width: 50%;
+  }
+  .section-character-content-two {
+    transform: translateX(230%) translateY(10%) scale(2.1);
+    width: 40%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .section-character-content-one {
+    transform: translateX(260%) scale(1.6);
+    width: 50%;
+    display: block !important;
+  }
+  .section-character-content-two {
+    transform: translateX(350%) translateY(10%) scale(2);
+    width: 40%;
   }
 }
